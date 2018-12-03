@@ -1,0 +1,16 @@
+<!-- Footer -->
+<footer class="row bg-light border-top" ng-if="footer">
+
+  <!-- Status -->
+  <div class="col-sm p-2 border-right clearfix">
+    <a ng-href="#!" ng-click="resetStatus()" class="btn btn-light float-left bg-danger text-white"><i class="fa fa-times"></i> Close</a>
+    <a ng-if="isAdd" ng-href="#!/contact/{{currentContact.id}}" ng-click="addContact()" ng-class="{disabled: !contactForm.addForm.$valid}" class="btn btn-light float-right bg-success text-white"><i class="fa fa-plus"></i> Add</a>
+    <a ng-if="isEdit" ng-href="#!/edit/{{currentContact.id}}" class="btn btn-light float-right bg-secondary text-white"><i class="fa fa-edit"></i> Edit</a>
+    <a ng-if="isDelete" ng-click="deleteContact()" class="btn btn-light float-right bg-warning text-white"><i class="fa fa-edit"></i> Delete</a>
+    <div class="text-center pt-2">
+      <span ng-if="isSelect">{{ (contacts | filter:{checked: true }).length }} contact selected</span>
+      <span ng-if="isAdd">Add new contact</span>
+    </div>
+  </div>
+
+</footer>

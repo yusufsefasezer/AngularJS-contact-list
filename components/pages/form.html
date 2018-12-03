@@ -1,0 +1,64 @@
+<div class="m-2">
+
+  <!-- Contact form -->
+  <form name="contactForm.addForm" novalidate="novalidate">
+
+    <!-- Photo -->
+    <div class="form-group text-center">
+      <label for="photo" class="btn border">
+        <img height="100" ng-src="{{currentContact.photo}}" alt="{{currentContact.name}}" />
+      </label>
+      <input type="file" class="d-none" id="photo" onchange="angular.element(this).scope().showImage(event)" />
+    </div>
+
+    <!-- Name -->
+    <div class="form-group row">
+      <label for="fullname" class="col-sm-2 col-form-label">Name</label>
+      <div class="col-sm-10">
+        <input type="text" ng-class="(contactForm.addForm.fullname.$touched && contactForm.addForm.fullname.$invalid) ? 'is-invalid' : ''" class="form-control" autofocus="autofocus" id="fullname" name="fullname" placeholder="Enter full name" ng-model="currentContact.name" required="required" />
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group row">
+      <label for="email" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" ng-class="(contactForm.addForm.email.$touched && contactForm.addForm.email.$invalid) ? 'is-invalid' : ''" class="form-control" id="email" name="email" placeholder="Enter email address" ng-model="currentContact.email" required="required" />
+      </div>
+    </div>
+
+    <!-- Phone -->
+    <div class="form-group row">
+      <label for="phone" class="col-sm-2 col-form-label">Phone</label>
+      <div class="col-sm-10">
+        <input type="tel" ng-class="(contactForm.addForm.phone.$touched && contactForm.addForm.phone.$invalid) ? 'is-invalid' : ''" class="form-control" id="phone" name="phone" placeholder="Enter phone number" ng-model="currentContact.phone" required="required" minlength="10" />
+      </div>
+    </div>
+
+    <!-- URL -->
+    <div class="form-group row">
+      <label for="url" class="col-sm-2 col-form-label">Website</label>
+      <div class="col-sm-10">
+        <input type="url" ng-class="(contactForm.addForm.url.$touched && contactForm.addForm.url.$invalid) ? 'is-invalid' : ''" class="form-control" id="url" name="url" placeholder="Enter URL" ng-model="currentContact.url" />
+      </div>
+    </div>
+
+    <!-- Address -->
+    <div class="form-group row">
+      <label for="address" class="col-sm-2 col-form-label">Address</label>
+      <div class="col-sm-10">
+        <textarea rows="3" ng-class="(contactForm.addForm.address.$touched && contactForm.addForm.address.$invalid) ? 'is-invalid' : ''" class="form-control" id="address" name="address" placeholder="Enter address" ng-model="currentContact.address"></textarea>
+      </div>
+    </div>
+
+    <!-- Note -->
+    <div class="form-group row">
+      <label for="notes" class="col-sm-2 col-form-label">Notes</label>
+      <div class="col-sm-10">
+        <textarea rows="3" ng-class="(contactForm.addForm.notes.$touched && contactForm.addForm.notes.$invalid) ? 'is-invalid' : ''" class="form-control" id="notes" name="notes" placeholder="Enter note" ng-model="currentContact.notes"></textarea>
+      </div>
+    </div>
+
+  </form>
+
+</div>

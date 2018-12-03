@@ -1,0 +1,15 @@
+<!-- Contact -->
+<li class="list-group-item list-group-item-action" ng-href="#/contact/{{contact.id}}">
+  <div class="row">
+    <div class="col-2">
+      <img class="rounded-circle" width="50" ng-src="{{contact.photo}}" alt="{{contact.name}}" />
+    </div>
+    <div class="col">
+      <h4 class="h6"><a ng-href="#!/contact/{{contact.id}}">{{contact.name}}</a></h4>
+      <small>{{contact.formatPhoneNumber()}}</small>
+    </div>
+    <div class="col-2" ng-if="isSelect">
+      <input type="checkbox" class="form-control" ng-model="contact.checked" />
+    </div>
+  </div>
+</li>
