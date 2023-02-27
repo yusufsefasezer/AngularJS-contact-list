@@ -1,4 +1,4 @@
-var RESIZE_IMAGE = false;
+var RESIZE_IMAGE = true;
 var app = angular.module('contactApp', ['ngRoute']);
 
 /////////////////////////////  Config  /////////////////////////////
@@ -260,7 +260,8 @@ function Contact(name, email, phone, url, photo, address, notes) {
 
 Contact.prototype.formatPhoneNumber = function () {
   if (this.phone) {
-    return this.phone.substr(0, 3) + ' ' + this.phone.substr(0, 3) + ' ' + this.phone.substr(0, 3);
+    var trimedPhone = this.phone.replace(/\s+/g, '');
+    return trimedPhone.substring(0, 3) + ' ' + trimedPhone.substring(3, 6) + ' ' + trimedPhone.substring(6, 9);
   }
   return this.phone;
 };
