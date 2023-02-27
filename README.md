@@ -1,12 +1,12 @@
 # AngularJS Contact List
 A simple contact list application developed with AngularJS.
 
-## [Download](https://github.com/yusufsefasezer/AngularJS-contact-list/archive/master.zip) / [yusufsezer.com](http://www.yusufsezer.com)
+## [Download](https://github.com/yusufsefasezer/AngularJS-contact-list/archive/master.zip) / [yusufsezer.com](https://www.yusufsezer.com)
 
 # Demo
-www.yusufsezer.com/AngularJS-contact-list/
+https://www.yusufsezer.com/projects/angularjs-contact-list/
 
 # License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details
 
-Created by [Yusuf SEZER](http://www.yusufsezer.com)
+Created by [Yusuf Sezer](http://www.yusufsezer.com)
